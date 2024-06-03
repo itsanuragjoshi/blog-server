@@ -22,12 +22,7 @@ dotenv.config();
 const app = express();
 
 // Enable CORS for all routes
-app.use(cors({
-  origin: process.env.CLIENT_URI,
-  methods: ["POST", "GET", "DELETE", "PUT"],
-  credentials: true
-}));
-
+app.use(cors());
 
 // Connect to MongoDB database
 const connectDB = async () => {
